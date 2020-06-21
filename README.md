@@ -1,6 +1,6 @@
 # AngularCalendar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0-rc.5.
+This is a simple angular 9 calendar component
 
 ## Development server
 
