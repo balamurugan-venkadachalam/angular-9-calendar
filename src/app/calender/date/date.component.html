@@ -1,0 +1,21 @@
+
+
+  <h5 class="row align-items-center">
+    <span class="date col-1">{{dateModel.date}}</span>
+    <small class="col d-sm-none text-center text-muted">{{dateModel.weekDay}}</small>
+    <span class="col-1"></span>
+  </h5>
+  <p class="d-sm-none" *ngFor="let event of dateModel.events">{{event}}</p>
+
+<!--
+*ngIf="!dateModel.currentMonth"
+<div *ngIf="dateModel.currentMonth" class="day col-sm p-2 border border-left-0 border-top-0 text-truncate ">
+  <h5 class="row align-items-center">
+    <span class="date col-1">{{dateModel.date}}</span>
+    <small class="col d-sm-none text-center text-muted">{{dateModel.weekDay}}</small>
+    <span class="col-1"></span>
+  </h5>
+  <p class="d-sm-none" *ngFor="let event of dateModel.events">{{event}}</p>
+</div>
+-->
+

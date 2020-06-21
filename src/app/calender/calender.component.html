@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <header>
+
+    <div class="d-flex justify-content-between">
+      <button class="btn secondary" (click)="previous()">Previous</button>
+      <h4>{{displayMonth}} {{displayYear}}</h4>
+      <button class="btn secondary" (click)="next()">Next Month</button>
+
+    </div>
+
+
+
+    <div class="row d-none d-sm-flex p-1 bg-dark text-white" >
+      <h6 class="col-sm p-0 text-center" *ngFor="let wd of weekDays">{{wd}}</h6>
+    </div>
+
+  </header>
+  <app-week  *ngFor="let week of monthModel.weeks" [dates]="week.dates" [ngClass]="'row border border-right-0 border-bottom-0'"></app-week>
+</div>

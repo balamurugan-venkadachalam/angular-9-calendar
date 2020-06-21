@@ -1,0 +1,6 @@
+<app-date
+  *ngFor="let i of dates" [dateModel]="i"
+  [ngClass]="i.currentMonth?'day col-sm p-2 border border-left-0 border-top-0 text-truncate' : 'day col-sm p-2 border border-left-0 border-top-0 text-truncate d-none d-sm-inline-block bg-light text-muted'"
+></app-date>
+
+<div class="w-100"></div>
