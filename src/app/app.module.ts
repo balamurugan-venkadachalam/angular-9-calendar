@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CalenderComponent } from './calender/calender.component';
+import { CalendarComponent } from './calendar/calendar.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import { DateComponent } from './calender/date/date.component';
-import { WeekComponent } from './calender/week/week.component';
+import { DateComponent } from './calendar/date/date.component';
+import { WeekComponent } from './calendar/week/week.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalenderComponent,
+    CalendarComponent,
     DateComponent,
     WeekComponent
   ],

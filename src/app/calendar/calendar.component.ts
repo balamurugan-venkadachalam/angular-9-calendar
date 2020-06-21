@@ -5,10 +5,10 @@ import {WeekModel} from "./model/week-model";
 
 @Component({
   selector: 'app-calender',
-  templateUrl: './calender.component.html',
-  styleUrls: ['./calender.component.css']
+  templateUrl: './calendar.component.html',
+  styleUrls: ['./calendar.component.css']
 })
-export class CalenderComponent implements OnInit {
+export class CalendarComponent implements OnInit {
 
   weekDays: string [] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   weekDaysAbbreviation: string [] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
