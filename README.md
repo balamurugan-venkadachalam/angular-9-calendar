@@ -1,6 +1,7 @@
 # AngularCalendar
 
-This is a simple angular 9 calendar component
+This is a simple angular 9 calendar component.
+![alt text](https://github.com/balamurugan-venkadachalam/angular-9-calendar/blob/master/angular-9-calender.png)
 
 ## Development server
 
