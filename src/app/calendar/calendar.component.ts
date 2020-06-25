@@ -14,7 +14,7 @@ export class CalendarComponent implements OnInit {
   weekDaysAbbreviation: string [] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
   months: string[] = ['January','February','March','April','May','June','July', 'August','September','October','November','December'];
-  monthsAbbreviation: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  //monthsAbbreviation: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   today: Date  = new Date();
 
@@ -24,7 +24,7 @@ export class CalendarComponent implements OnInit {
   displayMonth = this.months[this.today.getMonth()];
   displayYear = this.today.getFullYear();
 
-  calenderView = [];
+
   monthModel : MonthModel = new MonthModel();
 
   constructor() { }
@@ -32,9 +32,7 @@ export class CalendarComponent implements OnInit {
   ngOnInit(): void {
     console.log('today date is '+ this.today);
     this.setCalender(this.currentMonth, this.currentYear);
-    console.log(this.calenderView);
     console.log(this.monthModel);
-
   }
   next(){
     this.currentMonth++;
@@ -46,7 +44,6 @@ export class CalendarComponent implements OnInit {
   }
 
   setCalender(month, year){
-     this.calenderView = [];
      console.log('current month '+ month + ' current year '+ year)
      const date: Date = new Date(year, month);
      const firstDay = date.getDay();
@@ -67,30 +64,24 @@ export class CalendarComponent implements OnInit {
          let dateLabel = 0;
          if (i === 0 && j < firstDay) {
            if(firstDay === 1){
-              this.calenderView.push(lastMonthLastDate);
              dateLabel = lastMonthLastDate;
            } else {
              dateLabel = (lastMonthLastDate - ((firstDay - 1)  - j));
-             this.calenderView.push(dateLabel);
            }
            isCurrentMonth = false;
          } else if (currentDate > this.daysInMonth(month, year)) {
              dateLabel =nextMonthFirstDate
-             this.calenderView.push(nextMonthFirstDate);
              nextMonthFirstDate++;
            isCurrentMonth = false;
          } else {
            dateLabel =currentDate
-           this.calenderView.push(currentDate)
            currentDate ++;
            isCurrentMonth = true;
          }
          const dateModel: DateModel = new DateModel(dateLabel, this.weekDaysAbbreviation[j], isCurrentMonth);
          days.push(dateModel);
        }
-       this.calenderView.push('|');
        weeks.push(new WeekModel(days));
-
      }
      this.monthModel.weeks = weeks;
   }
